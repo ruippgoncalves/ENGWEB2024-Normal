@@ -18,7 +18,7 @@ module.exports = {
     },
 
     getEntities() {
-        return Contrato.distinct("NIPC_entidade_comunicante").sort();
+        return Contrato.distinct("entidade_comunicante").sort();
     },
 
     getTipo() {
