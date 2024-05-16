@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1= title
+    table
+        thead
+            tr
+                th idcontrato
+                th objectoContrato
+                th dataCelebracaoContrato
+                th precoContratual
+                th NIPC_entidade_comunicante
+                th entidade_comunicante
+        tbody
+            // O campo idcontrato deverá ser um link para a página do contrato com esse identificador;
+            // O campo NIPC_entidade_comunicante deverá ser um link para a página dessa entidade.
+
+            each contrato in contratos
+                tr
+                    td
+                        a(href='/'+contrato._id)= contrato._id
+                    td= contrato.objectoContrato
+                    td= contrato.dataCelebracaoContrato
+                    td= contrato.precoContratual
+                    td
+                        a(href='/entidades/'+contrato.NIPC_entidade_comunicante)= contrato.NIPC_entidade_comunicante
+                    td= contrato.entidade_comunicante

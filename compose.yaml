@@ -1,0 +1,14 @@
+services:
+  web_test_db:
+    image: mongo
+    container_name: web_test_db
+  web_api_server:
+    build: ./ex1
+    container_name: web_api_server
+    ports:
+      - "16000:16000"
+  web_client:
+    build: ./ex2
+    container_name: web_client
+    ports:
+      - "16001:16001"

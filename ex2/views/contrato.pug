@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1= title
+    a(href='/') Voltar
+    p
+        strong idcontrato:
+        span= contrato._id
+    p
+        strong objectoContrato:
+        span= contrato.objectoContrato
+    p
+        strong dataCelebracaoContrato:
+        span= contrato.dataCelebracaoContrato
+    p
+        strong precoContratual:
+        span= contrato.precoContratual
+    p
+        strong NIPC_entidade_comunicante:
+        a(href='/entidades/'+contrato.NIPC_entidade_comunicante)= contrato.NIPC_entidade_comunicante
+    p
+        strong entidade_comunicante:
+        span= contrato.entidade_comunicante
